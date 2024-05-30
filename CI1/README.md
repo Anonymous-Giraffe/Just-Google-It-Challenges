@@ -34,7 +34,7 @@ Integer overflow is on lines 18 and 19, Buffer Overflow is on line 25
 We can use an integer overflow to get past the check on line 19 to then utilize the buffer overflow to overwrite the return address for validate_passwd.
 
 ## First steps to the solution
-First Determine what size ranges allow you to execute the else code on line 23, you could try this by systematically increasing the userinput size until you get past the length check when you shouldn't. Determine the address of flag using dissas and find where user input is stored.
+First determine what size ranges allow you to execute the else code on line 23, you could try this by systematically increasing the userinput size until you get past the length check when you shouldn't. Determine the address of flag using dissas and find where user input is stored.
 
 # Solution
 Determine that input length is checked on line 19 once but then not before copying into buffer.
